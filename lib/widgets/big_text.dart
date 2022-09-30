@@ -6,27 +6,21 @@ class BigText extends StatelessWidget {
   final Color? color;
   final String text;
   double size;
+  double w = 400;
   TextOverflow overflow;
   BigText(
-    {
-      Key? key,
-      this.color, 
+      {Key? key,
+      this.color,
       required this.text,
-      this.overflow=TextOverflow.ellipsis,
-      this.size=20
-    }
-    ) : super(key: key);
+      this.overflow = TextOverflow.ellipsis,
+      this.size = 20})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      overflow: overflow,
-      style:TextStyle(
-        color:color,
-        fontWeight:FontWeight.w400,
-        fontSize: size
-        )
-    );
+    return Text(text,
+        overflow: overflow,
+        style: TextStyle(
+            color: color, fontWeight: FontWeight.w400, fontSize: size));
   }
 }

@@ -13,15 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'D_ACE',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:MainFoodPage(),
+      home: const MainFoodPage(),
     );
   }
 }
-
+/*
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -81,3 +81,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/

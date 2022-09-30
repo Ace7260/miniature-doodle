@@ -1,3 +1,4 @@
+import 'package:d_ace/home/food_page_body.dart';
 import 'package:d_ace/utils/colors.dart';
 import 'package:d_ace/widgets/big_text.dart';
 import 'package:d_ace/widgets/small_text.dart';
@@ -29,9 +30,12 @@ class _MainFoodPageState extends State<MainFoodPage> {
     return Scaffold(
       body: Column(
         children: [
+          // ignore: avoid_unnecessary_containers
           Container(
             child: Container(
+              // ignore: prefer_const_constructors
               margin: EdgeInsets.only(top: 45, bottom: 15),
+              // ignore: prefer_const_constructors
               padding: EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,9 +45,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                       BigText(text: "Burundi", color: AppColors.mainColor),
                       Row(
                         children: [
-                          SmallText(
-                            text: "Gitega",color:Colors.black54 ),
-                            Icon(Icons.arrow_drop_down_rounded)
+                          SmallText(text: "Gitega", color: Colors.black54),
+                          Icon(Icons.arrow_drop_down_rounded),
                         ],
                       )
                     ],
@@ -62,8 +65,32 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
+          FoodPageBody(),
+          /*   Container(
+            width: 200,
+            height: 50,
+            // color: Colors.red,
+            child: Center(
+              child: BigText(
+                text: "Ouvrir",
+                color: Color.fromARGB(255, 4, 4, 4),
+                size: 30,
+              ),
+            ),
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(100),
+              //boxShadow: BoxShadow(const Color(000)),
+            ),
+          )
+        */
         ],
       ),
+      /* floatingActionButton: FloatingActionButton(
+        onPressed: () => 1,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),*/
     );
   }
 }
